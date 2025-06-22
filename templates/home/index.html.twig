@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - VitrinePro{% endblock %}
+
+{% block body %}
+<main class="flex flex-col min-h-screen">
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-28 text-center md:text-left md:flex md:items-center md:justify-between">
+      <div class="max-w-xl mx-auto md:mx-0">
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+          Propulsez votre présence digitale<br/>avec un site vitrine sur-mesure.
+        </h1>
+        <p class="text-xl md:text-2xl font-light mb-10 max-w-lg drop-shadow-md">
+          Alliez design moderne et performances optimales grâce à Symfony et Tailwind CSS.<br/>
+          Notre solution clé en main vous permet de conquérir vos clients dès la première visite.
+        </p>
+        <div class="flex justify-center md:justify-start space-x-6">
+          <a href="{{ path('contact') }}" class="bg-white text-blue-700 font-semibold py-4 px-14 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+            Contactez-nous
+          </a>
+          <a href="#services" class="border-2 border-white text-white font-semibold py-4 px-14 rounded-xl hover:bg-white hover:text-blue-700 transition duration-300">
+            Nos services
+          </a>
+        </div>
+      </div>
+      <div class="hidden md:block max-w-lg">
+        <img src="https://img.freepik.com/free-vector/website-hero-banner-template-with-people-working-on-laptop_23-2149214233.jpg" alt="Illustration site vitrine" class="w-full h-auto object-cover"/>
+      </div>
+    </div>
+    <div class="absolute inset-x-0 bottom-0">
+      <svg viewbox="0 0 1440 80" class="w-full" xmlns="http://www.w3.org/2000/svg"><path fill="#f9fafb" d="M0 80h1440V40c-150 40-450 40-720 0S150 0 0 40z"/></svg>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-extrabold mb-12 text-gray-900">Nos Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+        <div class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-4 text-blue-700">Design Personnalisé</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Création de sites vitrine sur-mesure, adaptés à votre identité de marque.
+          </p>
+        </div>
+        <div class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-4 text-blue-700">Performance Optimale</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Sites rapides, responsives et optimisés SEO pour un référencement naturel efficace.
+          </p>
+        </div>
+        <div class="p-8 bg-gray-50 rounded-xl shadow hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-4 text-blue-700">Support & Maintenance</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Assistance continue pour assurer la pérennité et la sécurité de votre site.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-gradient-to-r from-blue-50 to-white py-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-extrabold mb-8 text-gray-900">À propos de VitrinePro</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Chez VitrinePro, nous sommes passionnés par le digital et la création d’expériences uniques.
+        Nous combinons expertise technique et design innovant pour propulser votre activité sur le web.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t py-8 mt-auto">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center text-gray-500 text-sm">
+      &copy; {{ "now"|date("Y") }} VitrinePro. Tous droits réservés.
+    </div>
+  </footer>
+
+</main>
+{% endblock %}

@@ -1,0 +1,82 @@
+{# templates/about/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}À propos - VitrinePro{% endblock %}
+
+{% block body %}
+<div class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900 font-sans antialiased">
+
+  <main class="max-w-6xl mx-auto px-6 py-16 sm:py-20 space-y-20">
+
+    <!-- Header -->
+    <section class="text-center max-w-3xl mx-auto">
+      <h1 class="text-5xl font-extrabold text-gray-900 mb-6 tracking-wide">
+  À propos de VitrinePro
+</h1>
+
+      <p class="text-xl text-gray-700 leading-relaxed">
+        Nous donnons vie à votre présence en ligne avec des sites vitrines modernes, efficaces et accessibles à tous.
+      </p>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="grid md:grid-cols-2 gap-16 items-start">
+      <div class="bg-white rounded-3xl shadow-lg p-10 hover:shadow-2xl transition-shadow duration-500">
+        <h2 class="text-3xl font-semibold mb-5 flex items-center space-x-3 text-blue-700">
+          <span class="text-4xl">🚀</span> 
+          <span>Notre mission</span>
+        </h2>
+        <p class="text-gray-700 leading-relaxed text-lg">
+          Aider les petites entreprises, indépendants et entrepreneurs à construire une vitrine en ligne professionnelle pour attirer plus de clients et renforcer leur crédibilité.
+        </p>
+      </div>
+      <div class="bg-white rounded-3xl shadow-lg p-10 hover:shadow-2xl transition-shadow duration-500">
+        <h2 class="text-3xl font-semibold mb-5 flex items-center space-x-3 text-green-600">
+          <span class="text-4xl">🌱</span>
+          <span>Nos valeurs</span>
+        </h2>
+        <ul class="list-disc list-inside text-gray-700 text-lg space-y-2">
+          <li>Transparence</li>
+          <li>Accessibilité</li>
+          <li>Qualité du design</li>
+          <li>Support humain</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="bg-gradient-to-r from-indigo-50 to-white rounded-3xl p-12 shadow-lg hover:shadow-xl transition-shadow duration-500">
+      <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">🧠 Notre vision</h2>
+      <p class="max-w-4xl mx-auto text-gray-700 text-lg leading-relaxed text-center">
+        Nous croyons qu’un bon site vitrine doit être simple à utiliser, agréable à consulter et parfaitement adapté aux objectifs du client. Nous voulons rendre la création web plus humaine, plus claire et plus rapide.
+      </p>
+    </section>
+
+    <!-- Team -->
+    <section>
+      <h2 class="text-4xl font-extrabold mb-10 text-center text-gray-900 tracking-wide">👥 Notre équipe</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-12">
+        {% for member in [
+          {name: 'Jean Dupont', role: 'Fondateur & Développeur', img: 'https://i.pravatar.cc/150?img=12'},
+          {name: 'Sophie Martin', role: 'Designer UI/UX', img: 'https://i.pravatar.cc/150?img=32'},
+          {name: 'Alex Leroy', role: 'Responsable Client', img: 'https://i.pravatar.cc/150?img=47'}
+        ] %}
+          <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transform hover:-translate-y-2 hover:shadow-2xl transition-transform duration-300">
+            <img src="{{ member.img }}" alt="{{ member.name }}" class="w-32 h-32 rounded-full object-cover mb-6 border-4 border-indigo-300 shadow-sm">
+            <h3 class="text-xl font-semibold text-gray-900 mb-1">{{ member.name }}</h3>
+            <p class="text-indigo-600 font-medium">{{ member.role }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-24 py-8">
+    <div class="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm select-none">
+      &copy; {{ "now"|date("Y") }} VitrinePro. Tous droits réservés.
+    </div>
+  </footer>
+</div>
+{% endblock %}

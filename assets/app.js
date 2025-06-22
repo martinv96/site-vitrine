@@ -1,4 +1,6 @@
 import './bootstrap.js';
+import './controllers/index.js';
+
 /*
  * Welcome to your app's main JavaScript file!
  *
